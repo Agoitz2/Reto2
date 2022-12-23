@@ -13,8 +13,15 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('autenticacions', function (Blueprint $table) {
+        Schema::create('autenticaciones', function (Blueprint $table) {
             $table->id();
+            $table->string('usuario')->unique();
+            $table->string('nombre')->ucfirst();
+            $table->string('apellido')->ucfirst();
+            $table->string('email')->unique();
+            $table->string('contrasena');
+            
+            
             $table->timestamps();
         });
     }
@@ -26,6 +33,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('autenticacions');
+        Schema::dropIfExists('autenticaciones');
     }
 };

@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('autenticaciones', function (Blueprint $table) {
             $table->id();
-            $table->string('usuario')->unique();
+            $table->string('autenticaciones')->unique();
             $table->string('nombre')->ucfirst();
             $table->string('apellido')->ucfirst();
             $table->string('email')->unique();

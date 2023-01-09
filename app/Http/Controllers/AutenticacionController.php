@@ -2,10 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\UpdateautenticacionRequest;
+use Illuminate\Http\Request;
 use App\Models\autenticacion;
-use Illuminate\Support\Facades\Hash;
-use Illuminate\Support\Facades\Crypt;
+// use Illuminate\Support\Facades\Crypt;
 
 class AutenticacionController extends Controller
 {
@@ -16,41 +15,8 @@ class AutenticacionController extends Controller
      */
     public function index()
     {
-        // $clave1 = Hash::make('1234');
-        // $clave1 = Crypt::encrypt('1234');
-        $user = autenticacion::find('1');
-        $clave1=$user->contrasena;
-        $cadenaDesencriptada = Crypt::decrypt($clave1);
-
-        // if ($this->comprobarContrasena('1234')) {
-        //    $si='si';
-        // }else{
-        //     $si='no';
-        // }
-        return view("welcome", ["clave1" => $clave1, 'si'=>$cadenaDesencriptada]);
-
     }
 
-    public function comprobarContrasena(string $request)
-    {
-        $input = $request;
-
-        $user = autenticacion::find('1');
-    
-        
-        $clave2 = bcrypt('1234');
-        if(!bcrypt.compare($input, $clave2)){
-    
-            return true;
-    
-        }else{
-    
-           return false;
-    
-        }
-    
-
-    }
     /**
      * Show the form for creating a new resource.
      *
@@ -58,18 +24,37 @@ class AutenticacionController extends Controller
      */
     public function create()
     {
-        //
+        return view("welcome");
+
     }
 
     public function store(Request $request) {
-        User::create([
-            'name'=> $request->get('name'),
-            'lastname'=> $request->get('lastname'),
+        $this->validate($request, [
+            "usuario" => "required|min:1",
+            "nombre" => "required|min:1",
+            "apellido" => "required|min:1",
+            "email" => "required|min:1",
+            "contrasena" => "required|confirmed|min:8",
+        ],
+        [
+            'usuario.required'=> 'Introduce el nombre de usuario. ', // custom message
+            'nombre.required'=> 'Introduce el nombre. ',
+            'apellido.required'=> 'Introduce el apellido. ', 
+            'email.required'=> 'Introduce el email. ', 
+            'contrasena.required'=> 'Introduce una contraseña de minimo 8 caracteres. ', 
+            'contrasena.size'=> 'Introduce una contraseña de minimo 8 caracteres. ', 
+            'contrasena.confirmed'=> 'Las contraseñas no coinciden. ', 
+         ]);
+        autenticacion::create([
+            'usuario'=> $request->get('usuario'),
+            'nombre'=> ucfirst($request->get('nombre')),
+            'apellido'=> ucfirst($request->get('apellido')), 
             'email'=> $request->get('email'), 
+            'contrasena'=> bcrypt($request->get('contrasena')), 
           
         ]);
         
-        return redirect(route('users.list'));
+        return redirect(route('create'));
     }
 
     /**

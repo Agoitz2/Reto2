@@ -21,7 +21,36 @@
         </style>
     </head>
     <body class="antialiased">
-            <p>{{ $clave1 }}</p>
-            <p> clave {{ $si }}</p>
+    <form method="POST" action="{{ route('store') }}">
+    @csrf
+                    @if($errors->any())
+                        <span class="warning">
+                        @foreach ($errors->all() as $error)
+                        {{ $error }}
+        </br>
+                        @endforeach
+                        </span>
+                    @endif
+                    <div class="form-input">
+     <label>uruario</label> <input  type="text" name="usuario" value="{{ old('usuario') }}">
+                    </div>
+                    <div class="form-input">
+     <label>nombre</label> <input  type="text" name="nombre" value="{{ old('nombre') }}">
+                    </div>
+                    <div class="form-input">
+     <label>apellido</label> <input  type="text" name="apellido" value="{{ old('apellido') }}">
+                    </div>
+                    <div class="form-input">
+        <label>Email</label> <input  type="text" name="email" value="{{ old('email') }}">
+                    </div>
+                    <div class="form-input">
+     <label>contraseña</label> <input  type="password" name="contrasena">
+                    </div>
+                    <div class="form-input">
+     <label>contraseña</label> <input  type="password" name="password_confirmation" required>
+                    </div>
+                    <button type="submit">Send</button>
+                </form>
+            </div>
     </body>
 </html>

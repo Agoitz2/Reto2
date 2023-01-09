@@ -16,8 +16,7 @@ use App\Http\Controllers\AutenticacionController;
 
 Route::controller(AutenticacionController::class)->group(function(){
 
-    Route::get('/', 'index')->name('index');
-    Route::get('/store', 'create')->name('create');
-    Route::post('/store', 'store')->name('store');
+    Route::get('/', 'create')->name('create');
+    Route::post('/', 'store')->name('store');
 
 });

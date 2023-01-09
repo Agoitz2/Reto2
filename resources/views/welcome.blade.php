@@ -23,7 +23,7 @@
     <body class="antialiased">
     <form method="POST" action="{{ route('store') }}">
     @csrf
-                    @if($errors->any())
+    @if($errors->any())
                         <span class="warning">
                         @foreach ($errors->all() as $error)
                         {{ $error }}
@@ -44,13 +44,14 @@
         <label>Email</label> <input  type="text" name="email" value="{{ old('email') }}">
                     </div>
                     <div class="form-input">
-     <label>contraseña</label> <input  type="password" name="contrasena">
+     <label>contraseña</label> <input  type="text" name="contrasena" value="{{ old('contrasena') }}">
                     </div>
                     <div class="form-input">
-     <label>contraseña</label> <input  type="password" name="password_confirmation" required>
+     <label>confirmacion</label> <input  type="text" name="confirmacion" value="{{ old('confirmacion') }}">
                     </div>
                     <button type="submit">Send</button>
                 </form>
             </div>
+           
     </body>
 </html>

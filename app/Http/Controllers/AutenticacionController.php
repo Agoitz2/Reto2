@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\autenticacion;
-// use Illuminate\Support\Facades\Crypt;
+use Illuminate\Support\Facades\Crypt;
 
 class AutenticacionController extends Controller
 {
@@ -33,17 +33,18 @@ class AutenticacionController extends Controller
             "usuario" => "required|min:1",
             "nombre" => "required|min:1",
             "apellido" => "required|min:1",
-            "email" => "required|min:1",
-            "contrasena" => "required|confirmed|min:8",
+            "email" => "required||email",
+            "contrasena" => "required|min:8",
+            "confirmacion" => "required|min:8|same:contrasena",
         ],
         [
             'usuario.required'=> 'Introduce el nombre de usuario. ', // custom message
             'nombre.required'=> 'Introduce el nombre. ',
             'apellido.required'=> 'Introduce el apellido. ', 
             'email.required'=> 'Introduce el email. ', 
-            'contrasena.required'=> 'Introduce una contraseña de minimo 8 caracteres. ', 
-            'contrasena.size'=> 'Introduce una contraseña de minimo 8 caracteres. ', 
-            'contrasena.confirmed'=> 'Las contraseñas no coinciden. ', 
+            'contrasena.required'=> 'Introduce una contraseña. ', 
+            'contrasena.min'=> 'Introduce una contraseña de minimo 8 caracteres. ', 
+            'confirmacion.same'=> 'Las contraseñas no coinciden. ', 
          ]);
         autenticacion::create([
             'usuario'=> $request->get('usuario'),

@@ -30,7 +30,7 @@ class AutenticacionController extends Controller
 
     public function store(Request $request) {
         $this->validate($request, [
-            "usuario" => "required|min:1",
+            "usuario" => "required||unique:posts|min:1",
             "nombre" => "required|min:1",
             "apellido" => "required|min:1",
             "email" => "required||email",

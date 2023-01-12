@@ -1,7 +1,8 @@
 
 @section('nav')
 
-<nav class="navbar  navegador">
+<nav class=" navbar navbar-expand-lg bg-body-tertiary navbar  navegador">
+
    <div class="row col-12">
    <div class="col-7 col-lg-9 color2">
         <div class="nav-item ">
@@ -11,15 +12,15 @@
            
         </div>
 
-        <div class=" d-flex col-4 col-lg-3 color3" >
+        <div class=" navbar-collapse d-flex col-4 col-lg-3 color3" >
             
 
-                <div class="nav-item col-6">
-                <a class="nav-link sesion" aria-current="page" href="#">Iniciar Sesion</a>
-                </div>
-                <div class="nav-item col-6">
-                <a class="nav-link sesion" aria-current="page" href="#">Registrarse</a>
-                </div>
+        <button class="btn btn-outline-success buscar" type="submit">
+                    Iniciar sesion
+                </button>
+<button class="btn btn-outline-success buscar" type="submit">
+                    Registrarse
+                </button>
 
         </div>
    </div>

@@ -1,10 +1,17 @@
 @extends('layout.layout')
 
-@include('nav.landingNav')
+@section('nav')
+  @include('nav.landingNav')
+@endsection
+
+@section('nav2')
+  @include('nav.generalNav')
+@endsection
+
 
 @section('content')
 <div class="card" style="width: 18rem;">
-  <img src="..." class="card-img-top" alt="...">
+  <img src="{{asset('img/logos/Logo_dos_colores_fondo_negro.png')}}" class="card-img-top" alt="...">
   <div class="card-body">
     <h5 class="card-title">Card title</h5>
     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>

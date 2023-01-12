@@ -1,7 +1,6 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\AutenticacionController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,9 +13,6 @@ use App\Http\Controllers\AutenticacionController;
 |
 */
 
-Route::controller(AutenticacionController::class)->group(function(){
-
-    Route::get('/', 'create')->name('create');
-    Route::post('/', 'store')->name('store');
-
+Route::get('/', function () {
+    return view('welcome');
 });

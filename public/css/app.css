@@ -1,4 +1,2 @@
-nav li{
-    list-style:none;
-    color: red;
-}
+@import url(nav.css);
+@import url(listaColores.css);

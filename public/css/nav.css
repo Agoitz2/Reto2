@@ -7,9 +7,21 @@
     z-index: 999;
   }
   .logo{
-    height: 100px;
-    border-radius: 8% ;
+    height: 80px;
+    border-radius: 25% ;
+    
 } 
+
+.navbar{
+    --navbar-color: rgba(var( --letraNegra), 0.45); 
+    --navbar-hover-color: rgba(var(--letraNegra), 0.8);
+    --navbar-disabled-color: rgba(var(--letraNegra), 0.3);
+    --navbar-active-color: rgba(var(--letraNegra), 1);
+}
+
+.nav-item{
+    list-style: none;
+}
 .buscar{
     color:var(--negro);
     border:1.5px var(--negro) solid;
@@ -19,4 +31,20 @@
     --focus-shadow-rgb: 25,135,84;
  
     --bs-gradient: none;
+}
+
+.sesion{
+    width: auto !important;
+    border: solid black 2px;
+    margin: 1px;
+}
+
+.color1{
+    background-color: aqua;
+}
+.color2{
+    background-color: rgb(38, 255, 0);
+}
+.color3{
+    background-color: rgb(217, 0, 255);
 }

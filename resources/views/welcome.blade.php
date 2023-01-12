@@ -1,6 +1,6 @@
 @extends('layout.layout')
 
-@include('nav.generalNav')
+@include('nav.landingNav')
 
 @section('content')
 <div class="card" style="width: 18rem;">

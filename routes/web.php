@@ -14,13 +14,9 @@ use App\Http\Controllers\AutenticacionController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::controller(AutenticacionController::class)->group(function(){
+
+    Route::get('/', 'create')->name('create');
+    Route::post('/', 'store')->name('store');
+
 });
-
-// Route::controller(AutenticacionController::class)->group(function(){
-
-//     Route::get('/', 'create')->name('create');
-//     Route::post('/', 'store')->name('store');
-
-// });

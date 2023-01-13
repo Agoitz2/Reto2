@@ -1,2 +1,26 @@
 @import url(nav.css);
+@import url(sesion.css);
+@import url(home.css);
+
+
 @import url(listaColores.css);
+
+
+.letraRoja{
+    color: var(--rojo) !important;
+}
+.link:hover{
+    color: var(--hover) !important;
+}
+.botonRojo{
+    color:white !important;
+    background-color: var(--rojo);
+    margin: 1%;
+   
+}
+.botonRojo:hover{
+    background-color: var(--hover);
+}
+.container{
+    padding-top: 2% ;
+}

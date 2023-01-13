@@ -1,6 +1,9 @@
 :root {
     --rojo: #9e3333;
     --negro: #282828;
-    --fondoNav:#be1e26;
+    --rojoBrillante:#be1e26;
+    --fondoNav:#952f2f;
+
     --letraNegra: 0,0,0;
+    --hover:#742727;
   }

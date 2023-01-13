@@ -1,15 +1,14 @@
 @extends('layout.layout')
 
 @section('nav')
-  @include('nav.landingNav')
-@endsection
-
-@section('nav2')
   @include('nav.generalNav')
 @endsection
 
 
+
 @section('content')
+
+
 <div class="card" style="width: 18rem;">
   <img src="{{asset('img/logos/Logo_dos_colores_fondo_negro.png')}}" class="card-img-top" alt="...">
   <div class="card-body">
@@ -18,4 +17,8 @@
     <a href="#" class="btn btn-primary">Go somewhere</a>
   </div>
 </div>
+
+
+
+
 @endsection

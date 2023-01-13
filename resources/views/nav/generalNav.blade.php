@@ -11,12 +11,12 @@
             <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
 
-                <li class="nav-item">
-                <a class="nav-link " aria-current="page" href="#">Anuncios</a>
+                <li class="nav-item ">
+                <a class="nav-link botonNav btn" aria-current="page" href="#">Anuncios</a>
                 </li>
 
                 <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <a class="nav-link dropdown-toggle botonNav btn" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     Eventos
                 </a>
                 <ul class="dropdown-menu">
@@ -29,10 +29,10 @@
                 </li>
 
                 <li class="nav-item">
-                <a class="nav-link disabled">Disabled</a>
+                <a class="nav-link botonNav btn">Disabled</a>
                 </li>
                 <li class="nav-item d-flex">
-                <a class="nav-link active " aria-current="page" href="#">Anuncios</a>
+                <a class="nav-link botonNav btn" aria-current="page" href="#">Anuncios</a>
                 </li>
 
             </ul>
@@ -41,7 +41,7 @@
                 
                 
                 <input class="form-control me-2" type="search" placeholder="Buscar..." aria-label="Search">
-                <button class="btn btn-outline-success buscar" type="submit">
+                <button class="btn  botonNav" type="submit">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
                     <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
                     </svg>
@@ -53,21 +53,6 @@
 
     
 </nav>
-<div class="container-fluid col-12">
-        <li class="nav-item ">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Filtrar <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-filter-left" viewBox="0 0 16 16">
-  <path d="M2 10.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1h-3a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5z"/>
-</svg>
-                </a>
-                <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">Action</a></li>
-                    <li><hr class="dropdown-divider"></li>
-                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                    <li><hr class="dropdown-divider"></li>
-                    <li><a class="dropdown-item" href="#">Something else here</a></li>
-                </ul>
-                </li>
-</div>
+
    
 @endsection

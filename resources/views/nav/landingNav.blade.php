@@ -15,10 +15,10 @@
         <div class=" navbar-collapse d-flex col-4 col-lg-3 color3" >
             
 
-        <button class="btn btn-outline-success buscar" type="submit">
+        <button class="btn botonRojo" type="submit">
                     Iniciar sesion
                 </button>
-<button class="btn btn-outline-success buscar" type="submit">
+<button class="btn botonRojo" type="submit">
                     Registrarse
                 </button>
 

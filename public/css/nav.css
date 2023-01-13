@@ -22,53 +22,12 @@
 .nav-item{
     list-style: none;
 }
-.buscar{
-    color:var(--negro) !important;
-    border:1.5px var(--negro) solid !important; 
-    --hover-color: #fff !important;
-    --hover-bg: var(--rojo) !important ;
-    --hover-border-color: var(--rojo) !important;
-    --focus-shadow-rgb: 25,135,84;
- 
-    --bs-gradient: none;
+.botonNav{
+    color:var(--letraNegra) !important;
+    margin: 1%;
 }
 
-btn-outline-success {
-    --bs-btn-color: var(--rojo);
-    --bs-btn-border-color: var(--rojo);
-    --bs-btn-hover-color: #fff;
-    --bs-btn-hover-bg: var(--rojo);
-    --bs-btn-hover-border-color: var(--rojo) !important;
-    --bs-btn-focus-shadow-rgb: 25,135,84;
-    --bs-btn-active-color: #fff;
-    --bs-btn-active-bg: var(--rojo);
-    --bs-btn-active-border-color: var(--rojo);
-    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-    --bs-btn-disabled-color: var(--rojo);
-    --bs-btn-disabled-bg: transparent;
-    --bs-btn-disabled-border-color: var(--rojo);
-    --bs-gradient: none;
+.botonNav:hover{
+    background-color: var(--rojoBrillante);
 }
 
-.sesion{
-    width: auto !important;
-    border: solid black 0.5px;
-    border-radius: 5% ;
-
-    margin: 1px;
-
-    --navbar-color: rgba(var( --letraNegra), 0.45); 
-    --navbar-hover-color: rgba(var(--letraNegra), 0.8);
-    --navbar-disabled-color: rgba(var(--letraNegra), 0.3);
-    --navbar-active-color: rgba(var(--letraNegra), 1);
-    --navbar-hover-bg: var(--rojo);
-    --navbar-hover-border-color: var(--rojo);
-
-    display: block; 
-    padding: var(--bs-nav-link-padding-y) var(--bs-nav-link-padding-x);
-    font-size: var(--bs-nav-link-font-size);
-    font-weight: var(--bs-nav-link-font-weight);
-    color: var(--bs-nav-link-color);
-    text-decoration: none;
-    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out;
-}

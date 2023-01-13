@@ -18,7 +18,7 @@ import Otros from "../../img/eventos/Otros.jpg";
 <section id="gallery">
   <div class="container">
     <div class="row">
-    <!-- conciertos -->
+    <!-- Concierto -->
     <div class="col-12 col-md-6 col-lg-4 mb-4">
         <div class="card">
             <img src="{{asset('img/eventos/Conciertos.jpg')}}" alt="" class="card-img-top">
@@ -29,7 +29,7 @@ import Otros from "../../img/eventos/Otros.jpg";
             </div>
         </div>
     </div>
-    <!-- teatro -->
+    <!-- Teatro -->
     <div class="col-12 col-md-6 col-lg-4 mb-4">
         <div class="card">
             <img src="{{asset('img/eventos/Teatro.jpg')}}" alt="" class="card-img-top">
